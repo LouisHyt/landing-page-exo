@@ -25,10 +25,26 @@ body{
     min-height: 100vh;
 }
 
+.title{
+    text-align: center;
+    width: 600px;
+}
+
+.title h3{
+    color: var(--darkerText);
+    font-size: 2.7em;
+    margin-bottom: 10px;
+}
+
+.title p{
+    color: var(--shyText);
+    font-size: 1.2em;
+}
+
 
 
 /* ------ Home Page ------ */
-.homepage{
+#homepage{
     background: var(--gradientBrackground);
     height: 100vh;
     display: flex;
@@ -169,7 +185,7 @@ body{
 }
 
 /* ------ Products Features ------ */
-.products{
+#products{
     background-color: white;
     height: 100vh;
     display: flex;
@@ -179,46 +195,13 @@ body{
     gap: 150px;
 }
 
-.products .title{
-    text-align: center;
-    width: 600px;
-}
-
-.products .title h3{
-    color: var(--darkerText);
-    font-size: 2.7em;
-    margin-bottom: 10px;
-}
-
-.products .title p{
-    color: var(--shyText);
-    font-size: 1.2em;
-}
-
-.products .products_cards{
+#products .products_cards{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
-@media (max-width: 1450px) {
-    .products .products_cards{
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
-    }
-}
-
-@media (max-width: 950px) {
-    .products .products_cards{
-        grid-template-columns: 1fr;
-        gap: 100px;
-    }
-    .products{
-        gap: 70px;
-    }
-}
-
-.products .products_cards .card{
+#products .products_cards .card{
     background: var(--gradientBrackground);
     width: 450px;
     aspect-ratio: 1/1;
@@ -230,11 +213,11 @@ body{
     transition: 0.3s ease-out;
 }
 
-.products .products_cards .card:hover{
+#products .products_cards .card:hover{
     transform: translateY(-10px);
 }
 
-.products .products_cards .card .content{
+#products .products_cards .card .content{
     position: absolute;
     top: 25%;
     left: 50%;
@@ -248,23 +231,183 @@ body{
     gap: 1.2em;
 }
 
-.products .products_cards .card .content i{
+#products .products_cards .card .content i{
     font-size: 4em;
 }
 
-.products .products_cards .card .content h4{
+#products .products_cards .card .content h4{
     font-size: 2em;
     font-weight: 500;
 }
 
-.products .products_cards .card .content p{
+#products .products_cards .card .content p{
     font-size: 1em;
     font-weight: 300;
     text-align: center;
 }
 
+/* Team */
+#team{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    padding-top: 20px;
+}
 
+#team .title{
+    width: 1000px;
+}
 
-/* Animations */
+#team .teamPanel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 150px;
+}
+
+/* ↑ Team - Teambox */
+#team .teamPanel .teambox{
+    width: 250px;
+    height: 400px;
+}
+
+.teambox .quality,
+.teambox .photo figure{
+    text-align: center;
+}
+
+.teambox .quality p:nth-of-type(1)
+{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.teambox .quality p:nth-of-type(2)
+{
+    font-size: 1.1em;
+    font-weight: 400;
+    color: var(--shyText);
+}
+
+.teambox .photo{
+    position: relative;
+    height: 300px;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: filter .5s ease;
+    cursor: pointer;
+}
+
+.teambox .photo:hover{
+    filter: grayscale(0%);
+}
+
+.teambox .photo:hover figure img{
+    transform-origin: center bottom;
+    transform: scale(1.15);
+}
+
+.teambox .photo figure img{
+    width: 250px;
+    transform-origin: center center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    transition: .5s ease;
+}
+
+.teambox .photo .imagebackground{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(232, 233, 230);
+    border-radius: 50vw;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.teambox .photo .socials{
+    position: absolute;
+    bottom: 8%;
+    left: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.teambox .photo .socials i {
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 100vw;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(200%);
+    opacity: 0;
+    transition: .2s ease-in-out;
+    z-index: 3;
+    transition-delay: var(--delay);
+}
+
+.teambox .photo .socials i:nth-of-type(1){
+    --delay: 0.4s;
+}
+.teambox .photo:hover .socials i:nth-of-type(1){
+    --delay: 0s;
+}
+
+.teambox .photo .socials i:nth-of-type(2){
+    --delay: 0.2s;
+}
+
+.teambox .photo .socials i:nth-of-type(3){
+    --delay: 0s;
+}
+
+.teambox .photo:hover .socials i:nth-of-type(3){
+    --delay: 0.4s;
+}
+
+.teambox .photo:hover .socials i {
+    transform: translateY(0%);
+    opacity: 1;
+    transition-delay: var(--delay);
+}
+
+.teambox .infos{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.teambox .infos p:nth-of-type(1){
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.teambox .infos p:nth-of-type(2){
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--shyText);
+}
+
+#other{
+    margin-top: 50px;
+    height: 200vh;
+}
+
 
 
