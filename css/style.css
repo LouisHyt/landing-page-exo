@@ -41,6 +41,45 @@ body{
     font-size: 1.2em;
 }
 
+#scrollToTop{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 10;
+    text-decoration: none;
+    color: white;
+    background-color: #3a3a3c;
+    border-radius: 50vw;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+}
+
+#scrollToTop i {
+    font-size: 1.6em;
+    animation: test 2s infinite ease;
+}
+
+#scrollToTop:hover{
+    background-color: rgb(71, 71, 89)
+}
+
+@keyframes test {
+    0%{
+        transform: translateY(1px);
+    }
+    50%{
+        transform: translateY(-2px);
+    }
+    100%{
+        transform: translateY(1px);
+    }
+}
+
 
 
 /* ------ Home Page ------ */
@@ -591,6 +630,104 @@ body{
     font-weight: 300;
 }
 
+/* Pricing */
+#pricing{
+    margin-top: 150px;
+    --mainColor: #598FFE;
+    --mainColorHover: #7aa2f1;
+}
+
+/* ↑ SubSection 1*/
+#pricing > .sub_section_1{
+    display: grid;
+    grid-template-columns: 800px 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+#pricing > .sub_section_1 > .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 50px;
+    width: 100%;
+}
+
+#pricing > .sub_section_1 > .title h3{
+    font-size: 1.9em;
+} 
+
+#pricing > .sub_section_1 > .title a{
+    width: fit-content;
+    text-decoration: none;
+}
+
+#pricing > .sub_section_1 > .title a > button {
+    border: none;
+    background-color: var(--mainColor);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+#pricing > .sub_section_1 > .title a:hover > button{
+    background-color: var(--mainColorHover);
+}
+
+.sub_section_1 > .title .stats{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.sub_section_1 > .title .stats div p:first-child{
+    color: black;
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+/* ↑ SubSection 2*/
+.sub_section_2{
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.sub_section_2 .title{
+    margin-top: 20px;
+}
+
+.sub_section_2 .price_tables{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_section_2 .price_tables .table{
+    background-color: white;
+    height: 450px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.sub_section_2 .price_tables .table:nth-child(2){
+    transform: translateY(-30px);
+}
+
 /* Footer */
 footer{
     background-color: #26272b;
@@ -600,7 +737,7 @@ footer{
     justify-content: center;
     align-items: center;
     color: #7b7f8a;
-    font-weight: 400;
+    font-weight: 300;
     gap: 20px;
 }
 
