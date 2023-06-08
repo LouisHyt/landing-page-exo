@@ -1,0 +1,186 @@
+@media (max-width: 1300px){
+    #pricing > .sub_section_1{
+        display: grid;
+        grid-template-columns: 700px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sub_section_2 .price_tables .table:nth-child(2){
+        transform: translateY(0);
+    }
+
+}
+
+@media (max-width: 1400px){
+    #products .products_cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #blog .blog_cards{
+        grid-template-columns: repeat(2, 400px);
+    }
+}
+
+@media (max-width: 950px){
+    #products .products_cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #pricing > .sub_section_1 > figure > img{
+        width: 500px;
+    }
+
+    #pricing > .sub_section_1 > figure{
+       display: flex;
+       justify-content: flex-end;
+    }
+}
+
+@media (max-width: 500px){
+    #products .products_cards .card{
+        width: 80vw;
+    }
+    .sub_section_2 .price_tables .table{
+        width: 300px;
+    }
+
+    .sub_section_2 .title {
+        font-size: 0.8em;
+        width: 300px;
+    }
+
+    #pricing > .sub_section_1 > figure{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    #pricing > .sub_section_1 > figure > img{
+        width: 300px;
+    }
+
+}
+
+
+@media (max-width: 400px){
+
+    #scrollToTop{
+        bottom: 25px;
+        right: 25px;
+        width: 35px;
+        height: 35px;
+        font-size: 0.7em;
+    }
+
+    .homepage_top .navigation{
+        display: none;
+    }
+
+    .homepage_top .socials{
+        display: none;
+    }
+
+    .homepage_top{
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .homepage_middle figure img{
+        width: 200px;
+        transform: translateY(-125px);
+    }
+
+    .homepage_middle .newsletter form #email_prompt{
+        height: 45px;
+    }
+
+    .homepage_middle .newsletter form button[type="submit"]{
+        padding: 12px 20px;
+    }
+
+    #blog .blog_cards{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .blog_cards .card figure img{
+        width: 150%;
+    }
+
+    #blog .blog_cards .card{
+        width: 300px;
+    }
+
+    #blog .blog_cards .card figure {
+        width: inherit;
+    }
+
+    #team .teamPanel .teambox{
+        margin-inline: 0;
+    }
+
+
+    .homepage_middle{
+        flex-direction: column;
+        padding: 0;
+        padding-top: 50px
+    }
+
+    .homepage_middle .newsletter{
+        font-size: 0.6em;
+        width: 300px;
+    }
+
+
+    #products .products_cards .card{
+        width: 80vw;
+    }
+    #products .products_cards .card .content *:not(:first-child){
+        display: none;
+    }
+    #products .products_cards .card .content{
+       top: 50%;
+       transform: translate(-50%, -50%);
+    }
+
+    .title{
+        width: 300px!important;
+        font-size: 0.6em!important;
+    }
+
+    #pricing > .sub_section_1 > .title{
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+        padding: 20px;
+        font-size: 0.8em;
+        padding-bottom: 30px;
+    }
+
+    #parallax .content{
+        font-size: 0.7em;
+        width: 300px;
+    }
+
+    #pricing > .sub_section_1{
+        grid-template-columns: none;
+    }
+
+    .sub_section_2 .price_tables .table:nth-child(2){
+        transform: translateY(0);
+    }
+
+    #pricing > .sub_section_1 > figure > img{
+        width: 300px;
+    }
+
+
+    footer{
+        font-size: 0.6em;
+    }
+
+
+}

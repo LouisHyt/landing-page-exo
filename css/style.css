@@ -226,19 +226,20 @@ body{
 /* ------ Products Features ------ */
 #products{
     background-color: white;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-    gap: 150px;
+    padding-bottom: 100px;
+    gap: 80px;
 }
 
 #products .products_cards{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
 
 #products .products_cards .card{
     background: var(--gradientBrackground);
@@ -268,6 +269,7 @@ body{
     justify-content: center;
     padding-inline: 25px;
     gap: 1.2em;
+    text-align: center;
 }
 
 #products .products_cards .card .content i{
@@ -291,7 +293,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 180px;
+    gap: 80px;
     padding-top: 20px;
     background-color: white;
 }
@@ -304,13 +306,20 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 150px;
+    flex-wrap: wrap;
 }
 
 /* ↑ Team - Teambox */
 #team .teamPanel .teambox{
     width: 250px;
-    height: 550px;
+    height: fit-content;
+    margin-top: 10px;
+    margin-inline: 80px;
+    margin-bottom: 80px;
+}
+
+.teambox .quality{
+    margin-top: 50px;
 }
 
 .teambox .quality,
@@ -484,7 +493,7 @@ body{
 }
 
 #parallax p{
-    width: 1000px;
+    width: inherit;
     text-align: center;
     color: var(--shyText);
     margin-top: 20px;
@@ -640,10 +649,15 @@ body{
 /* ↑ SubSection 1*/
 #pricing > .sub_section_1{
     display: grid;
-    grid-template-columns: 800px 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 100px;
+}
+
+#pricing > .sub_section_1 > figure > img{
+    object-fit: cover;
+    width: 800px;
 }
 
 #pricing > .sub_section_1 > .title {
@@ -654,7 +668,6 @@ body{
     text-align: left;
     padding-left: 80px;
     padding-right: 50px;
-    width: 100%;
 }
 
 #pricing > .sub_section_1 > .title h3{
@@ -710,8 +723,12 @@ body{
 }
 
 .sub_section_2 .price_tables{
-    display: grid;
-    grid-template-columns: repeat(3, 420px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(3, 420px); */
     gap: 25px;
     justify-content: center;
     align-items: center;
@@ -720,7 +737,7 @@ body{
 .sub_section_2 .price_tables .table{
     background-color: white;
     height: 565px;
-    width: 100%;
+    width: 420px;
     border-radius: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
